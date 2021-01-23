@@ -1,667 +1,739 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://keyboard.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Roboto-Light.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://root.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0.458824, 0.372549, 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Keyboard"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("keyboard:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 576 ), Vector2( 0, 279 ) ]
+}
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="apps_panel" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 576.0
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
 
 [node name="keyboard" type="Panel" parent="."]
-anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -512.0
-margin_top = -367.0
-margin_right = 512.0
+margin_bottom = 297.0
+custom_styles/panel = SubResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
 
 [node name="GRAVE" type="Button" parent="keyboard"]
-margin_left = 12.0
-margin_top = 88.0
-margin_right = 60.0
-margin_bottom = 135.0
+anchor_left = 0.0657911
+anchor_top = 0.0538721
+anchor_right = 0.112666
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "~"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="tab" type="Button" parent="keyboard"]
-margin_left = 12.0
-margin_top = 143.0
-margin_right = 97.0
-margin_bottom = 190.0
+anchor_left = 0.0657911
+anchor_top = 0.239057
+anchor_right = 0.148799
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "TAB"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="caps" type="Button" parent="keyboard"]
-margin_left = 12.0
-margin_top = 198.0
-margin_right = 104.0
-margin_bottom = 245.0
+anchor_left = 0.0657911
+anchor_top = 0.424243
+anchor_right = 0.155634
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 toggle_mode = true
 text = "CAPS"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="shiftL" type="Button" parent="keyboard"]
-margin_left = 12.0
-margin_top = 253.0
-margin_right = 134.0
-margin_bottom = 300.0
+anchor_left = 0.0657911
+anchor_top = 0.609427
+anchor_right = 0.184932
+anchor_bottom = 0.767677
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
 text = "SHIFT"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="ctrlL" type="Button" parent="keyboard"]
-margin_left = 12.0
-margin_top = 308.0
-margin_right = 72.0
-margin_bottom = 355.0
+anchor_left = 0.0657911
+anchor_top = 0.794613
+anchor_right = 0.124385
+anchor_bottom = 0.952861
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
 text = "CTRL"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="1" type="Button" parent="keyboard"]
-margin_left = 75.0
-margin_top = 88.0
-margin_right = 123.0
-margin_bottom = 135.0
+anchor_left = 0.127315
+anchor_top = 0.0538721
+anchor_right = 0.17419
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "1"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="2" type="Button" parent="keyboard"]
-margin_left = 133.0
-margin_top = 88.0
-margin_right = 181.0
-margin_bottom = 135.0
+anchor_left = 0.183956
+anchor_top = 0.0538721
+anchor_right = 0.230831
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "2"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="3" type="Button" parent="keyboard"]
-margin_left = 192.0
-margin_top = 88.0
-margin_right = 240.0
-margin_bottom = 135.0
+anchor_left = 0.241572
+anchor_top = 0.0538721
+anchor_right = 0.288447
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "3"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="4" type="Button" parent="keyboard"]
-margin_left = 250.0
-margin_top = 88.0
-margin_right = 298.0
-margin_bottom = 135.0
+anchor_left = 0.298212
+anchor_top = 0.0538721
+anchor_right = 0.345087
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "4"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="5" type="Button" parent="keyboard"]
-margin_left = 308.0
-margin_top = 88.0
-margin_right = 356.0
-margin_bottom = 135.0
+anchor_left = 0.354854
+anchor_top = 0.0538721
+anchor_right = 0.401729
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "5"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="6" type="Button" parent="keyboard"]
-margin_left = 366.0
-margin_top = 88.0
-margin_right = 414.0
-margin_bottom = 135.0
+anchor_left = 0.411494
+anchor_top = 0.0538721
+anchor_right = 0.458369
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "6"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="7" type="Button" parent="keyboard"]
-margin_left = 424.0
-margin_top = 88.0
-margin_right = 472.0
-margin_bottom = 135.0
+anchor_left = 0.468134
+anchor_top = 0.0538721
+anchor_right = 0.51501
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "7"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="8" type="Button" parent="keyboard"]
-margin_left = 482.0
-margin_top = 88.0
-margin_right = 530.0
-margin_bottom = 135.0
+anchor_left = 0.524776
+anchor_top = 0.0538721
+anchor_right = 0.571651
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "8"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="9" type="Button" parent="keyboard"]
-margin_left = 540.0
-margin_top = 88.0
-margin_right = 588.0
-margin_bottom = 135.0
+anchor_left = 0.581416
+anchor_top = 0.0538721
+anchor_right = 0.628291
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "9"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="0" type="Button" parent="keyboard"]
-margin_left = 598.0
-margin_top = 88.0
-margin_right = 646.0
-margin_bottom = 135.0
+anchor_left = 0.638057
+anchor_top = 0.0538721
+anchor_right = 0.684932
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "0"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Q" type="Button" parent="keyboard"]
-margin_left = 106.0
-margin_top = 143.0
-margin_right = 154.0
-margin_bottom = 190.0
+anchor_left = 0.157587
+anchor_top = 0.239057
+anchor_right = 0.204462
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "q"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="A" type="Button" parent="keyboard"]
-margin_left = 113.0
-margin_top = 198.0
-margin_right = 161.0
-margin_bottom = 245.0
+anchor_left = 0.164423
+anchor_top = 0.424243
+anchor_right = 0.211298
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "a"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Z" type="Button" parent="keyboard"]
-margin_left = 144.0
-margin_top = 253.0
-margin_right = 192.0
-margin_bottom = 300.0
+anchor_left = 0.194697
+anchor_top = 0.609427
+anchor_right = 0.241572
+anchor_bottom = 0.767677
+custom_fonts/font = SubResource( 3 )
 text = "z"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="W" type="Button" parent="keyboard"]
-margin_left = 163.0
-margin_top = 143.0
-margin_right = 211.0
-margin_bottom = 190.0
+anchor_left = 0.213253
+anchor_top = 0.239057
+anchor_right = 0.260128
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "w"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="S" type="Button" parent="keyboard"]
-margin_left = 170.0
-margin_top = 198.0
-margin_right = 218.0
-margin_bottom = 245.0
+anchor_left = 0.220087
+anchor_top = 0.424243
+anchor_right = 0.266962
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "s"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="X" type="Button" parent="keyboard"]
-margin_left = 201.0
-margin_top = 253.0
-margin_right = 249.0
-margin_bottom = 300.0
+anchor_left = 0.250362
+anchor_top = 0.609427
+anchor_right = 0.297237
+anchor_bottom = 0.767677
+custom_fonts/font = SubResource( 3 )
 text = "x"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="E" type="Button" parent="keyboard"]
-margin_left = 221.0
-margin_top = 143.0
-margin_right = 269.0
-margin_bottom = 190.0
+anchor_left = 0.269892
+anchor_top = 0.239057
+anchor_right = 0.316768
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "e"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="D" type="Button" parent="keyboard"]
-margin_left = 228.0
-margin_top = 198.0
-margin_right = 276.0
-margin_bottom = 245.0
+anchor_left = 0.276728
+anchor_top = 0.424243
+anchor_right = 0.323604
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "d"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="C" type="Button" parent="keyboard"]
-margin_left = 259.0
-margin_top = 253.0
-margin_right = 307.0
-margin_bottom = 300.0
+anchor_left = 0.307003
+anchor_top = 0.609427
+anchor_right = 0.353878
+anchor_bottom = 0.767677
+custom_fonts/font = SubResource( 3 )
 text = "c"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="R" type="Button" parent="keyboard"]
-margin_left = 279.0
-margin_top = 143.0
-margin_right = 327.0
-margin_bottom = 190.0
+anchor_left = 0.326533
+anchor_top = 0.239057
+anchor_right = 0.373408
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "r"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="F" type="Button" parent="keyboard"]
-margin_left = 286.0
-margin_top = 198.0
-margin_right = 334.0
-margin_bottom = 245.0
+anchor_left = 0.333369
+anchor_top = 0.424243
+anchor_right = 0.380244
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "f"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="V" type="Button" parent="keyboard"]
-margin_left = 317.0
-margin_top = 253.0
-margin_right = 365.0
-margin_bottom = 300.0
+anchor_left = 0.363643
+anchor_top = 0.609427
+anchor_right = 0.410518
+anchor_bottom = 0.767677
+custom_fonts/font = SubResource( 3 )
 text = "v"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="T" type="Button" parent="keyboard"]
-margin_left = 337.0
-margin_top = 143.0
-margin_right = 385.0
-margin_bottom = 190.0
+anchor_left = 0.383173
+anchor_top = 0.239057
+anchor_right = 0.430048
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "t"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="G" type="Button" parent="keyboard"]
-margin_left = 344.0
-margin_top = 198.0
-margin_right = 392.0
-margin_bottom = 245.0
+anchor_left = 0.390009
+anchor_top = 0.424243
+anchor_right = 0.436884
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "g"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="B" type="Button" parent="keyboard"]
-margin_left = 375.0
-margin_top = 253.0
-margin_right = 423.0
-margin_bottom = 300.0
+anchor_left = 0.420283
+anchor_top = 0.609427
+anchor_right = 0.467158
+anchor_bottom = 0.767677
+custom_fonts/font = SubResource( 3 )
 text = "b"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Y" type="Button" parent="keyboard"]
-margin_left = 395.0
-margin_top = 143.0
-margin_right = 443.0
-margin_bottom = 190.0
+anchor_left = 0.439814
+anchor_top = 0.239057
+anchor_right = 0.486689
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "y"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="H" type="Button" parent="keyboard"]
-margin_left = 402.0
-margin_top = 198.0
-margin_right = 450.0
-margin_bottom = 245.0
+anchor_left = 0.446651
+anchor_top = 0.424243
+anchor_right = 0.493526
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "h"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="N" type="Button" parent="keyboard"]
-margin_left = 433.667
-margin_top = 253.667
-margin_right = 481.667
-margin_bottom = 300.667
+anchor_left = 0.477576
+anchor_top = 0.611674
+anchor_right = 0.524451
+anchor_bottom = 0.769922
+custom_fonts/font = SubResource( 3 )
 text = "n"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="U" type="Button" parent="keyboard"]
-margin_left = 453.0
-margin_top = 143.0
-margin_right = 501.0
-margin_bottom = 190.0
+anchor_left = 0.496455
+anchor_top = 0.239057
+anchor_right = 0.54333
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "u"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="J" type="Button" parent="keyboard"]
-margin_left = 460.0
-margin_top = 198.0
-margin_right = 508.0
-margin_bottom = 245.0
+anchor_left = 0.503291
+anchor_top = 0.424243
+anchor_right = 0.550166
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "j"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="M" type="Button" parent="keyboard"]
-margin_left = 491.667
-margin_top = 253.667
-margin_right = 539.667
-margin_bottom = 300.667
+anchor_left = 0.534215
+anchor_top = 0.611674
+anchor_right = 0.58109
+anchor_bottom = 0.769922
+custom_fonts/font = SubResource( 3 )
 text = "m"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="I" type="Button" parent="keyboard"]
-margin_left = 511.0
-margin_top = 143.0
-margin_right = 559.0
-margin_bottom = 190.0
+anchor_left = 0.553095
+anchor_top = 0.239057
+anchor_right = 0.59997
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "i"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="K" type="Button" parent="keyboard"]
-margin_left = 518.0
-margin_top = 198.0
-margin_right = 566.0
-margin_bottom = 245.0
+anchor_left = 0.559932
+anchor_top = 0.424243
+anchor_right = 0.606807
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "k"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="COMMA" type="Button" parent="keyboard"]
-margin_left = 549.667
-margin_top = 253.667
-margin_right = 597.667
-margin_bottom = 300.667
+anchor_left = 0.590856
+anchor_top = 0.611674
+anchor_right = 0.637731
+anchor_bottom = 0.769922
+custom_fonts/font = SubResource( 3 )
 text = ","
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="O" type="Button" parent="keyboard"]
-margin_left = 569.0
-margin_top = 143.0
-margin_right = 617.0
-margin_bottom = 190.0
+anchor_left = 0.609736
+anchor_top = 0.239057
+anchor_right = 0.656611
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "o"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="L" type="Button" parent="keyboard"]
-margin_left = 576.0
-margin_top = 198.0
-margin_right = 624.0
-margin_bottom = 245.0
+anchor_left = 0.616572
+anchor_top = 0.424243
+anchor_right = 0.663447
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "l"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="PERIOD" type="Button" parent="keyboard"]
-margin_left = 607.667
-margin_top = 253.667
-margin_right = 655.667
-margin_bottom = 300.667
+anchor_left = 0.647497
+anchor_top = 0.611674
+anchor_right = 0.694372
+anchor_bottom = 0.769922
+custom_fonts/font = SubResource( 3 )
 text = "."
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="P" type="Button" parent="keyboard"]
-margin_left = 627.0
-margin_top = 142.528
-margin_right = 675.0
-margin_bottom = 189.528
+anchor_left = 0.666377
+anchor_top = 0.237468
+anchor_right = 0.713252
+anchor_bottom = 0.395717
+custom_fonts/font = SubResource( 3 )
 text = "p"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="SEMI" type="Button" parent="keyboard"]
-margin_left = 634.0
-margin_top = 198.0
-margin_right = 682.0
-margin_bottom = 245.0
+anchor_left = 0.673213
+anchor_top = 0.424243
+anchor_right = 0.720088
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = ";"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="MINUS" type="Button" parent="keyboard"]
-margin_left = 656.0
-margin_top = 88.0
-margin_right = 704.0
-margin_bottom = 135.0
+anchor_left = 0.695313
+anchor_top = 0.0538721
+anchor_right = 0.742188
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "-"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="LBRACKET" type="Button" parent="keyboard"]
-margin_left = 685.0
-margin_top = 143.0
-margin_right = 733.0
-margin_bottom = 190.0
+anchor_left = 0.723632
+anchor_top = 0.239057
+anchor_right = 0.770507
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "["
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="EQUALS" type="Button" parent="keyboard"]
-margin_left = 714.0
-margin_top = 88.0
-margin_right = 762.0
-margin_bottom = 135.0
+anchor_left = 0.751953
+anchor_top = 0.0538721
+anchor_right = 0.798828
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
 text = "="
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="backspace" type="Button" parent="keyboard"]
-margin_left = 772.0
-margin_top = 88.0
-margin_right = 857.0
-margin_bottom = 135.0
-text = "BACKSPACE"
+anchor_left = 0.808594
+anchor_top = 0.0538721
+anchor_right = 0.890625
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
+text = "BCK"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="RBRACKET" type="Button" parent="keyboard"]
-margin_left = 743.0
-margin_top = 143.0
-margin_right = 791.0
-margin_bottom = 190.0
+anchor_left = 0.780273
+anchor_top = 0.239057
+anchor_right = 0.827148
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "]"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="BSLASH" type="Button" parent="keyboard"]
-margin_left = 801.0
-margin_top = 143.0
-margin_right = 856.0
-margin_bottom = 190.0
+anchor_left = 0.836914
+anchor_top = 0.239057
+anchor_right = 0.890625
+anchor_bottom = 0.397306
+custom_fonts/font = SubResource( 3 )
 text = "\\"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="APOSTROPHE" type="Button" parent="keyboard"]
-margin_left = 692.0
-margin_top = 198.0
-margin_right = 740.0
-margin_bottom = 245.0
+anchor_left = 0.729854
+anchor_top = 0.424243
+anchor_right = 0.776729
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "'"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="enter" type="Button" parent="keyboard"]
-margin_left = 750.0
-margin_top = 198.0
-margin_right = 856.0
-margin_bottom = 245.0
+anchor_left = 0.786494
+anchor_top = 0.424243
+anchor_right = 0.89001
+anchor_bottom = 0.582492
+custom_fonts/font = SubResource( 3 )
 text = "ENTER"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="FSLASH" type="Button" parent="keyboard"]
-margin_left = 665.667
-margin_top = 253.667
-margin_right = 713.667
-margin_bottom = 300.667
+anchor_left = 0.704137
+anchor_top = 0.611674
+anchor_right = 0.751012
+anchor_bottom = 0.769922
+custom_fonts/font = SubResource( 3 )
 text = "/"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="shiftR" type="Button" parent="keyboard"]
-margin_left = 724.0
-margin_top = 254.0
-margin_right = 856.0
-margin_bottom = 301.0
+anchor_left = 0.761104
+anchor_top = 0.612794
+anchor_right = 0.89001
+anchor_bottom = 0.771043
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
 text = "SHIFT"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="function" type="Button" parent="keyboard"]
-margin_left = 83.0754
-margin_top = 308.0
-margin_right = 143.075
-margin_bottom = 355.0
+anchor_left = 0.135201
+anchor_top = 0.794613
+anchor_right = 0.193794
+anchor_bottom = 0.952861
+custom_fonts/font = SubResource( 3 )
 toggle_mode = true
 text = "FN"
-
-[node name="meta" type="Button" parent="keyboard"]
-margin_left = 154.075
-margin_top = 308.0
-margin_right = 214.075
-margin_bottom = 355.0
-toggle_mode = true
-text = "META"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="altL" type="Button" parent="keyboard"]
-margin_left = 225.075
-margin_top = 308.0
-margin_right = 285.075
-margin_bottom = 355.0
+anchor_left = 0.203486
+anchor_top = 0.794613
+anchor_right = 0.262079
+anchor_bottom = 0.952861
+custom_fonts/font = SubResource( 3 )
 toggle_mode = true
 text = "ALT"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="altR" type="Button" parent="keyboard"]
-margin_left = 608.075
-margin_top = 308.0
-margin_right = 668.075
-margin_bottom = 355.0
+anchor_left = 0.694372
+anchor_top = 0.794613
+anchor_right = 0.752966
+anchor_bottom = 0.952861
+custom_fonts/font = SubResource( 3 )
 toggle_mode = true
 text = "ALT"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="tool" type="Button" parent="keyboard"]
-margin_left = 679.075
-margin_top = 308.0
-margin_right = 739.075
-margin_bottom = 355.0
-toggle_mode = true
+anchor_left = 0.763708
+anchor_top = 0.794613
+anchor_right = 0.822302
+anchor_bottom = 0.952861
+custom_fonts/font = SubResource( 3 )
 text = "TOOL"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="ctrlR" type="Button" parent="keyboard"]
-margin_left = 750.075
-margin_top = 308.0
-margin_right = 810.075
-margin_bottom = 355.0
+anchor_left = 0.833008
+anchor_top = 0.794613
+anchor_right = 0.889648
+anchor_bottom = 0.952862
+custom_fonts/font = SubResource( 3 )
 toggle_mode = true
 text = "CTRL"
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
-[node name="arrowL" type="Button" parent="keyboard"]
-margin_left = 846.0
-margin_top = 308.0
-margin_right = 893.0
-margin_bottom = 355.0
-toggle_mode = true
-text = "L"
+[node name="hideKeyboard" type="Button" parent="keyboard"]
+anchor_left = 0.918634
+anchor_top = 0.053872
+anchor_right = 0.975275
+anchor_bottom = 0.212121
+custom_fonts/font = SubResource( 3 )
+text = "Done"
 __meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="arrowD" type="Button" parent="keyboard"]
-margin_left = 902.0
-margin_top = 308.0
-margin_right = 949.0
-margin_bottom = 355.0
-toggle_mode = true
-text = "D"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="arrowU" type="Button" parent="keyboard"]
-margin_left = 902.0
-margin_top = 254.0
-margin_right = 949.0
-margin_bottom = 301.0
-toggle_mode = true
-text = "U"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="delete" type="Button" parent="keyboard"]
-margin_left = 902.0
-margin_top = 143.0
-margin_right = 949.0
-margin_bottom = 237.0
-toggle_mode = true
-text = "DEL"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="pageU" type="Button" parent="keyboard"]
-margin_left = 958.0
-margin_top = 143.0
-margin_right = 1005.0
-margin_bottom = 190.0
-toggle_mode = true
-text = "PGU"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="end" type="Button" parent="keyboard"]
-margin_left = 958.0
-margin_top = 88.0
-margin_right = 1005.0
-margin_bottom = 135.0
-toggle_mode = true
-text = "END"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="home" type="Button" parent="keyboard"]
-margin_left = 902.0
-margin_top = 88.0
-margin_right = 949.0
-margin_bottom = 135.0
-toggle_mode = true
-text = "HME"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="pageD" type="Button" parent="keyboard"]
-margin_left = 958.0
-margin_top = 198.0
-margin_right = 1005.0
-margin_bottom = 237.0
-toggle_mode = true
-text = "PGD"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="arrowR" type="Button" parent="keyboard"]
-margin_left = 958.0
-margin_top = 308.0
-margin_right = 1005.0
-margin_bottom = 355.0
-toggle_mode = true
-text = "R"
-__meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="SPACE" type="Button" parent="keyboard"]
-margin_left = 297.0
-margin_top = 308.0
-margin_right = 598.0
-margin_bottom = 355.0
-toggle_mode = true
+anchor_left = 0.269531
+anchor_top = 0.794613
+anchor_right = 0.68457
+anchor_bottom = 0.952862
+custom_fonts/font = SubResource( 3 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Keyboard = SubResource( 4 )
+[connection signal="pressed" from="keyboard/hideKeyboard" to="." method="keyboardHide"]
