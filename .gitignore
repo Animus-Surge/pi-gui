@@ -1,0 +1,11 @@
+# packages
+
+*.x86_64
+*.x86
+*.pck
+*.zip
+
+# imports
+
+*.import
+/.import
