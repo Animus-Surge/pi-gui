@@ -129,7 +129,14 @@ func initializeSignals():
 # warning-ignore:return_value_discarded
 	$backspace.connect("pressed", self, "backspace")
 
+func showKeyboard():
+	$AnimationPlayer.play("Keyboard")
+
+func hideKeyboard():
+	$AnimationPlayer.play_backwards("Keyboard")
+
 func alphakey(character, alt_character):
+	
 	if shiftOn:
 		get_parent().updateText(alt_character, true)
 	else:
@@ -153,6 +160,7 @@ func key(keyname):
 
 func _ready():
 	initializeSignals()
+	set_process(true)
 
 #Modifier keys - TODO: separate out the sides so they can do individual things (later)
 
@@ -185,6 +193,7 @@ func fnToggle(toggled):
 
 func capsToggle(toggled):
 	capsOn = toggled
+	print(capsOn)
 
 #Alphanumeric keys
 
@@ -334,51 +343,21 @@ func FSLASH():
 #action keys
 
 func tab():
-	pass
+	alphakey("    ", "    ")
 
 func enter():
-	#if global.textboxFocus:
-		alphakey("\n", "\n")
+	key("return")
 
 func backspace():
 	key("backspace")
 
 func space():
-	#if global.textboxFocus:
-		alphakey(" ", " ")
-
-func delete():
-	pass
-
-func home():
-	pass
-
-func end():
-	pass
-
-func pgup():
-	pass
-
-func pgdn():
-	pass
-
-#arrow keys
-
-func arrowU():
-	pass
-
-func arrowD():
-	pass
-
-func arrowL():
-	pass
-
-func arrowR():
-	pass
+	alphakey(" ", " ")
 
 #key label processing
 func _process(_delta):
 	if capsOn or shiftOn:
+		print(capsOn)
 		$Q.text = "Q"
 		$W.text = "W"
 		$E.text = "E"
@@ -431,7 +410,7 @@ func _process(_delta):
 		$COMMA.text = "<"
 		$PERIOD.text = ">"
 		$FSLASH.text = "?"
-	else:
+	if !capsOn and !shiftOn:
 		$Q.text = "q"
 		$W.text = "w"
 		$E.text = "e"

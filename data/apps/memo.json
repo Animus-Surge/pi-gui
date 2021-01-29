@@ -1,0 +1,11 @@
+{
+	"app_name":"Memo",
+	"app_id":"memo",
+	"author":"Surge",
+	"version":"v1.0.0",
+	"description":"A basic memo pad",
+	"app_path":"res://apps/memo",
+	"icon":"${app_path}/memo.png",
+	"required_data_files":[],
+	"include_modules":["keyboard"]
+}

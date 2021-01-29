@@ -1,5 +1,9 @@
 extends Control
 
+const DEBUG = true
+
+onready var appslot = preload("res://prefabs/appslot.tscn")
+
 var focusedTextbox
 
 func initSignals():
@@ -7,7 +11,22 @@ func initSignals():
 
 func _ready():
 	initSignals()
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	loadApps()
+	if !DEBUG:
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
+func loadApps():
+	var appdir = Directory.new()
+	appdir.open("res://data/apps")
+	appdir.list_dir_begin(true, true)
+	var app = appdir.get_next()
+	while app != "":
+		var slot = appslot.instance()
+		var file = File.new()
+		file.open("res://data/apps/" + app, File.READ)
+		slot.setDetails(JSON.parse(file.get_as_text()).result)
+		$homescreen/apps/layout.add_child(slot)
+		app = appdir.get_next()
 
 func close():
 	get_tree().quit(0);
@@ -28,10 +47,10 @@ func updateText(key, isalphanumeric):
 				pass #TODO
 
 func keyboardShow():
-	$AnimationPlayer.play("Keyboard")
+	$keyboard/AnimationPlayer.play("Keyboard")
 
 func keyboardHide():
-	$AnimationPlayer.play_backwards("Keyboard")
+	$keyboard/AnimationPlayer.play_backwards("Keyboard")
 
 func textboxInput(event):
 	if event is InputEventMouseButton:

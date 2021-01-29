@@ -1,9 +1,9 @@
 # packages
 
-#*.x86_64
-#*.x86
-#*.pck
-#*.zip
+*.x86_64
+*.x86
+*.pck
+*.zip
 
 # imports
 

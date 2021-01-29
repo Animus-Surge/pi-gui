@@ -1,0 +1,11 @@
+{
+	"app_name":"Calculator",
+	"app_id":"calculator",
+	"author":"Surge",
+	"version":"v1.0.0",
+	"description":"A basic four function calculator",
+	"app_path":"res://apps/calculator",
+	"icon":"${app_path}/calculator.png",
+	"required_data_files":[],
+	"include_modules":[]
+}

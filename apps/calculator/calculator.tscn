@@ -1,0 +1,268 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://apps/calculator/calculator.gd" type="Script" id=1]
+[ext_resource path="res://fonts/Roboto-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Roboto-Medium.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="calculator" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -0.840912
+margin_bottom = -0.840942
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="display" type="Label" parent="."]
+anchor_left = 0.206055
+anchor_top = 0.0243056
+anchor_right = 0.979492
+anchor_bottom = 0.107639
+custom_fonts/font = SubResource( 1 )
+align = 2
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="decimal" type="Button" parent="."]
+anchor_left = 0.777589
+anchor_top = 0.802083
+anchor_right = 0.850831
+anchor_bottom = 0.932292
+custom_fonts/font = SubResource( 2 )
+text = "."
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="equal" type="Button" parent="."]
+anchor_left = 0.875
+anchor_top = 0.657986
+anchor_right = 0.948242
+anchor_bottom = 0.932292
+custom_fonts/font = SubResource( 2 )
+text = "="
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="add" type="Button" parent="."]
+anchor_left = 0.875
+anchor_top = 0.513889
+anchor_right = 0.948242
+anchor_bottom = 0.644097
+custom_fonts/font = SubResource( 2 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="sub" type="Button" parent="."]
+anchor_left = 0.875
+anchor_top = 0.369792
+anchor_right = 0.948242
+anchor_bottom = 0.5
+custom_fonts/font = SubResource( 2 )
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="backspace" type="Button" parent="."]
+anchor_left = 0.874268
+anchor_top = 0.225694
+anchor_right = 0.947511
+anchor_bottom = 0.355903
+custom_fonts/font = SubResource( 2 )
+text = "<-"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="mult" type="Button" parent="."]
+anchor_left = 0.777589
+anchor_top = 0.225694
+anchor_right = 0.850831
+anchor_bottom = 0.355903
+custom_fonts/font = SubResource( 2 )
+text = "*"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="div" type="Button" parent="."]
+anchor_left = 0.696534
+anchor_top = 0.225694
+anchor_right = 0.769776
+anchor_bottom = 0.355903
+custom_fonts/font = SubResource( 2 )
+text = "/"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="clear" type="Button" parent="."]
+anchor_left = 0.615479
+anchor_top = 0.225694
+anchor_right = 0.688722
+anchor_bottom = 0.355903
+custom_fonts/font = SubResource( 2 )
+text = "C"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num0" type="Button" parent="."]
+anchor_left = 0.616211
+anchor_top = 0.802083
+anchor_right = 0.769531
+anchor_bottom = 0.932292
+custom_fonts/font = SubResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="homebtn" type="Button" parent="."]
+anchor_left = 0.0205078
+anchor_top = 0.0243056
+anchor_right = 0.173828
+anchor_bottom = 0.154514
+custom_fonts/font = SubResource( 3 )
+text = "QUIT"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num1" type="Button" parent="."]
+anchor_left = 0.616211
+anchor_top = 0.657986
+anchor_right = 0.689453
+anchor_bottom = 0.788194
+custom_fonts/font = SubResource( 2 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num2" type="Button" parent="."]
+anchor_left = 0.696534
+anchor_top = 0.657986
+anchor_right = 0.769776
+anchor_bottom = 0.788194
+custom_fonts/font = SubResource( 2 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num3" type="Button" parent="."]
+anchor_left = 0.777589
+anchor_top = 0.657986
+anchor_right = 0.850831
+anchor_bottom = 0.788194
+custom_fonts/font = SubResource( 2 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num4" type="Button" parent="."]
+anchor_left = 0.616211
+anchor_top = 0.513889
+anchor_right = 0.689453
+anchor_bottom = 0.644097
+custom_fonts/font = SubResource( 2 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num5" type="Button" parent="."]
+anchor_left = 0.696534
+anchor_top = 0.513889
+anchor_right = 0.769776
+anchor_bottom = 0.644097
+custom_fonts/font = SubResource( 2 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num6" type="Button" parent="."]
+anchor_left = 0.777589
+anchor_top = 0.513889
+anchor_right = 0.850831
+anchor_bottom = 0.644097
+custom_fonts/font = SubResource( 2 )
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num7" type="Button" parent="."]
+anchor_left = 0.616211
+anchor_top = 0.369792
+anchor_right = 0.689453
+anchor_bottom = 0.5
+custom_fonts/font = SubResource( 2 )
+text = "7"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num8" type="Button" parent="."]
+anchor_left = 0.696534
+anchor_top = 0.369792
+anchor_right = 0.769776
+anchor_bottom = 0.5
+custom_fonts/font = SubResource( 2 )
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="num9" type="Button" parent="."]
+anchor_left = 0.777589
+anchor_top = 0.369792
+anchor_right = 0.850831
+anchor_bottom = 0.5
+custom_fonts/font = SubResource( 2 )
+text = "9"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+[connection signal="pressed" from="decimal" to="." method="keyPress" binds= [ "decimal" ]]
+[connection signal="pressed" from="equal" to="." method="keyPress" binds= [ "equals" ]]
+[connection signal="pressed" from="add" to="." method="keyPress" binds= [ "add" ]]
+[connection signal="pressed" from="sub" to="." method="keyPress" binds= [ "sub" ]]
+[connection signal="pressed" from="backspace" to="." method="keyPress" binds= [ "backspace" ]]
+[connection signal="pressed" from="mult" to="." method="keyPress" binds= [ "mult" ]]
+[connection signal="pressed" from="div" to="." method="keyPress" binds= [ "div" ]]
+[connection signal="pressed" from="clear" to="." method="keyPress" binds= [ "clear" ]]
+[connection signal="pressed" from="num0" to="." method="numberPress" binds= [ 0 ]]
+[connection signal="pressed" from="homebtn" to="." method="go_home"]
+[connection signal="pressed" from="num1" to="." method="numberPress" binds= [ 1 ]]
+[connection signal="pressed" from="num2" to="." method="numberPress" binds= [ 2 ]]
+[connection signal="pressed" from="num3" to="." method="numberPress" binds= [ 3 ]]
+[connection signal="pressed" from="num4" to="." method="numberPress" binds= [ 4 ]]
+[connection signal="pressed" from="num5" to="." method="numberPress" binds= [ 5 ]]
+[connection signal="pressed" from="num6" to="." method="numberPress" binds= [ 6 ]]
+[connection signal="pressed" from="num7" to="." method="numberPress" binds= [ 7 ]]
+[connection signal="pressed" from="num8" to="." method="numberPress" binds= [ 8 ]]
+[connection signal="pressed" from="num9" to="." method="numberPress" binds= [ 9 ]]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://apps/memo/memo.gd" type="Script" id=1]
+[ext_resource path="res://modules/keyboard/keyboard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://fonts/Roboto-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://fonts/Roboto-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 4 )
+
+[node name="memo" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 21.0
+margin_top = 309.591
+margin_right = 117.0
+margin_bottom = 372.591
+custom_fonts/font = SubResource( 1 )
+text = "Quit"
+
+[node name="keyboard" parent="." instance=ExtResource( 2 )]
+
+[node name="view" type="TextEdit" parent="."]
+margin_left = 21.0
+margin_top = 19.0
+margin_right = 999.0
+margin_bottom = 263.0
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="go_home"]
+[connection signal="gui_input" from="view" to="." method="onTextboxFocus"]
